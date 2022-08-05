@@ -1,6 +1,8 @@
 data = { "query" : "진연"}    #dictionary는 { } 로 표시 {key : value} 
 
 print("data :", data)                           # data : {'query': '진연'}
+print("data.keys():", data.keys())
+print("data.values():", data.values())
 print("type(data) :", type(data))               # type(data) : <class 'dict'>
 
 print("data['query'] :", data['query'])         # data['query'] : 진연
