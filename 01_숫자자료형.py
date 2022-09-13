@@ -1,1 +1,0 @@
-https://github.com/ahora3734/2022.7._python_basic.git
