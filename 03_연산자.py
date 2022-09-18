@@ -1,10 +1,15 @@
-# ==== 산술연산자 ====
+# ==== 산술연산자(*, /, //, %) ====
 print(5 * 2)
 print(10 / 4)
 print(10 // 3) #10을 3으로 나눈 몫
 print(10 % 3) # 10을 3으로 나눈 나머지 값
 
-# ==== 비교연산자 ====
+a = 1 + 2 + 3 # 6
+a = a + 4 #10
+a += 5 #15, A *= 5 => A = A * 5
+print(a)
+
+# ==== 비교연산자(==, !=, >=) ====
 num = 3 # 오른쪽에 있는 3(값)을 변수 num에 대입
 num == 3 # num과 3이 같다면 true. 다르다면 false
 num != 3 # num과 3이 같지 않다면 true, 같다면 false
@@ -40,11 +45,10 @@ in_both('apples', 'oranges')
 # e
 # s
 
-# ==== 논리 연산자 ====
-# and, or, not
+# ==== 논리 연산자(and, or, not) ====
 print(not True and False or not False) # True / 논리 연산자가 식 하나에 들어 있으면 not -> and -> or 순으로 판단
 
-# ==== 비트 연산자 ====
+# ==== 비트 연산자(&, |, ^, ~) ====
 # &(and), |(or, shift backslash), ^(XOR: 같으면 false, 다르면 true), ~(not)
 print(bin(13)) # 0b1101 : bin(정수) 10진수를 2진수로 된 문자열로 변환
 print(0b1101) # 13 : 2진수는 10진수로 즉시 변환
