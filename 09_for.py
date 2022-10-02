@@ -41,6 +41,25 @@ for waiting_t in (10, 20, 30, 40, 50):
 # 대기번호 : 40
 # 대기번호 : 50
 
+#딕셔너리
+scores = {"수학":0, "영어":50, "코딩":100, "기술가정":100}
+for subject, score in scores.items(): # in scores(딕셔너리명만 작성한 경우)는 X
+    print(subject, score)
+# 수학 0
+# 영어 50
+# 코딩 100
+# 기술가정 100
+
+scores = {"수학":0, "영어":50, "코딩":100, "기술가정":100}
+for subject, score in scores.items(): # in scores(딕셔너리명만 작성한 경우)는 X
+    print(subject.ljust(8), str(score).rjust(4), sep=":")
+     #.ljust(8) 8칸확보하여 왼쪽정렬, .rjust(4) 4칸 확보하여 오른쪽 정렬
+# 수학      :   0
+# 영어      :  50
+# 코딩      : 100
+# 기술가정    : 100 빈칸 2칸과 2글자 사이의 차이로 정렬이 안됨.
+
+
 #==== 문자열 ====
 cafe = ["김진연", "김범수", "김민수"]
 for customer in cafe:
@@ -54,7 +73,7 @@ for customer in cafe:
 students = [1, 2, 3, 4]
 print(students) # [1, 2, 3, 4]
 students = [i+100 for i in students] 
-# students에 있는 값을 하나씩 불러와 i에 넣고, i에 310을 더한 값을 리스트에 넣는다.
+# students에 있는 값을 하나씩 불러와 i에 넣고, i에 100을 더한 값을 리스트에 넣는다.
 print(students) # [101, 102, 103, 104]
 
 # 학생 이름을 길이로 변환
@@ -66,29 +85,3 @@ print(students) # [8, 4, 10]
 students = ["Iron man", "Thor", "I am groot"]
 students = [i.upper() for i in students]
 print(students) # ['IRON MAN', 'THOR', 'I AM GROOT']
-
-# 문제) 당신은 cocoa 서비스를 이용하는 택시 기사입니다.
-# 50명의 승객과 매칭 기회가 있을 때, 총 탑승 승객 수를 구하는 프로그램을 작성하시오.
-
-# 조건1 : 승객별 운행 소요시간은 5분 ~ 50분 사이의 난수로 정해진다.
-# 조건2 : 당신은 소요시간 5분 ~ 15분 사이의 승객만 매칭해야 한다.
-
-# (출력문 예시)
-# [o] 1번째 손님 (소요시간 : 15분)
-# [ ] 2번째 손님 (소요시간 : 50분)
-# [o] 3번째 손님 (소요시간 : 5분)
-# ...
-# [ ] 50번째 손님 (소요시간 : 16분)
-
-# 충 탑승 승객 : 2명
-
-from random import *
-cnt = 0 # 총 탑승 승객 수
-for i in range(1, 51): # 1 ~ 50번째 승객
-    time = randrange(5, 51) # 5 ~ 50분 소요시간 랜덤
-    if 5 <= time <= 15: # 소요시간(time)이 5 ~ 50분 이하의 손님
-        print("[o] {0}번째 손님 (소요시간 : {1}".format(i, time))
-        cnt += 1 # 탑승한 승객의 수 증가
-    else:
-        print("[ ] %s번째 손님 (소요시간 : %s" %(i, time))
-print(f"총 탑승 승객 : {cnt}")

@@ -1,3 +1,6 @@
+print("a" + "b") # ab
+print("a", "b") # a b
+
 print(1, 2, 3) # 1 2 3
 
 print('안녕', 'python') # 안녕 python
