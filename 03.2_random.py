@@ -8,7 +8,7 @@ print(int(random() * 10) + 1) # 1 ~ 10 이하의 임의의 값(정수) 생성
 
 #로또 번호(1~45숫자를 임의로 출력)
 print(int(random() * 45) + 1) # 1 ~ 45 이하의 임의의 값(정수) 생성
-print(randrange(1, 46)) # 1 ~ 46 미만의 임의의 값(정수) 생성 
+print(randrange(1, 46)) # 1 ~ 46 미만의 임의의 값(정수) 생성, randrange(start, stop, step)
 print(randint(1, 45)) # 1 ~ 45 이하의 임의의 값(정수) 생성
 
 
